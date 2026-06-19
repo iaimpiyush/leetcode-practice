@@ -1,3 +1,22 @@
+var fizzbuzz = function(n) {
+
+    const arraytoStore = []
+    for(let i =1; i<=n; i++){
+
+        let str = ""
+        if(i%3 === 0) str += "Fizz" 
+        if(i%5 === 0) str += "Buzz" 
+        arraytoStore.push(str || i.toString())
+    }
+    return arraytoStore
+}
+const arraytoStore = fizzbuzz(100)
+console.log(arraytoStore)
+
+
+
+
+// 1st Method of FizzBuzz Solution
 var fizzBuzz = function(inputNumber) {
     // validation
     if(!Number.isInteger(inputNumber) || inputNumber <= 0){
@@ -24,8 +43,8 @@ var fizzBuzz = function(inputNumber) {
     }
     return result;
 }
-const result = fizzBuzz(15)
-console.log(15, result)
+const result = fizzBuzz(10)
+console.log(result)
 
 
 
@@ -51,11 +70,11 @@ var fizzBuzz2 = function(inputNumber) {
     return answer;
 }
 const answer = fizzBuzz2(15)
-console.log(15, answer)
+console.log(answer)
 
 
 
-/* 3rd Solution of FizzBuzz */
+// 3rd Method of FizzBuzz Solution
 var fizzBuzz2 = function(n) {
 
     const arrayVal = []
@@ -68,5 +87,5 @@ var fizzBuzz2 = function(n) {
     }
     return arrayVal
 }
-const arrayVal = fizzBuzz2(30)
+const arrayVal = fizzBuzz2(9)
 console.log(arrayVal)
