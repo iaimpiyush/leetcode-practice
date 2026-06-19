@@ -1,3 +1,26 @@
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function (number_input) {
+    if (number_input < 0 || (number_input !== 0 && number_input % 10 === 0)) {
+        return false;
+    }
+
+    let reservedHalf = 0;
+    while (number_input > reservedHalf) {
+        const digit = number_input % 10;
+
+        reservedHalf = reservedHalf * 10 + digit;
+        number_input = Math.trunc(number_input / 10);
+    }
+
+    return number_input === reservedHalf || number_input === Math.trunc(reservedHalf / 10);
+};
+
+
+
+// Palindrome solution without converting number into string
 var isPalindrome = (n) => {
     let copy = n
     let reversed = 0
